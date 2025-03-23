@@ -7,9 +7,11 @@ export default function Home() {
     <div className="bg-[#F8F9FA]" suppressHydrationWarning>
       <h1>
         <Hero />
-        <h2 className="text-center text-2xl font-semibold mt-10 text-black" suppressHydrationWarning>All Products</h2>
-        <ProductList />
       </h1>
+      <h2 className="text-center text-2xl font-semibold mt-10 text-black">
+        All Products
+      </h2>
+      <ProductList />
       <Footer />
     </div>
   );
