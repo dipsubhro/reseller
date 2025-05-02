@@ -22,7 +22,7 @@ function Navbar() {
       <div className="flex justify-between items-center">
         <Link href="/" className="hidden md:inline-block text-lg font-semibold">
           {" "}
-          Zwatches{" "}
+          Resellify{" "}
         </Link>
         <div className="relative max-w-[300px] md:w-[400px]">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -32,7 +32,7 @@ function Navbar() {
             type="text"
             onChange={handlechange}
             className="h-[36px] relative pl-10 border-[1px] border-blacl/[0.7] text-sm rounded-[8px] w-full py-2 px-3 focus:outline-none bg-transparent"
-            placeholder="Search Zwatches"
+            placeholder="Search Products..."
           />
         </div>
         <Link href="/add-product">

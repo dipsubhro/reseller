@@ -7,11 +7,13 @@ function Hero() {
     <div className="min-h-[70vh] md:min-h-[60vh] lg:min-h-[90vh] flex flex-col md:flex-row justify-center items-center bg-white px-4 md:px-12 text-black">
       <div className="max-w-2xl">
         <h1 className="text-5xl pt-6 md:pt-0 md:text-7xl leading-tight font-semibold">
-          Timeless elegance on your wrist{" "}
+        Resell Anything, Anytime{" "}
         </h1>
         <p className="text-[#495057] mt-4">
-          Discover our curated collections of premium watches, crafted for those
-          who appreciate sophistication and precision.
+        Your Marketplace, Your Rules 
+        </p>
+        <p className="text-[#495057] mt-4">
+        Turn Anything Into Opportunity – Resell with Confidence
         </p>
         <Link href="#product">
           <button className="mt-8 bg-[#212529] text-white px-3 py-2 rounded-md cursor-pointer">
@@ -20,7 +22,7 @@ function Hero() {
         </Link>
       </div>
       <div>
-        <Image src="/watch2-remove.png" alt="img" width={500} height={500}/> 
+        <Image src="/hero.png" alt="img" width={1000} height={1000}/> 
       </div>
     </div>
   );
