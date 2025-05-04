@@ -2,10 +2,10 @@
 
 import { connectDB } from "../../db/connectDB";
 import Product from "../../models/product.model";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
-  request: Request,
+  request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   await connectDB();
@@ -13,7 +13,10 @@ export async function GET(
   try {
     const product = await Product.findOne({ _id: params.id });
     if (!product) {
-      return NextResponse.json({ message: "Product not found" }, { status: 404 });
+      return NextResponse.json(
+        { message: "Product not found" },
+        { status: 404 }
+      );
     }
 
     return NextResponse.json({ product }, { status: 200 });
