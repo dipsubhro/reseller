@@ -2,16 +2,13 @@
 
 import { connectDB } from "../../db/connectDB";
 import Product from "../../models/product.model";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: Request, { params }: any) {
   await connectDB();
 
   try {
-    const product = await Product.findOne({ _id: params.id });
+    const product = await Product.findById(params.id);
     if (!product) {
       return NextResponse.json(
         { message: "Product not found" },
